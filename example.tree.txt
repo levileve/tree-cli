@@ -1,0 +1,12 @@
+ ├── client/
+ │   ├── src/
+ │   │   ├── app.js
+ │   ├── build/
+ │
+ ├── server/
+ │   ├── index.js
+ │
+ ├── Dockerfile
+ ├── docker-compose.yml
+ ├── .gitignore
+ ├── .env
