@@ -4,11 +4,11 @@ CLI para converter um arquivo `.txt` com estrutura de árvore em pastas e arquiv
 
 Feito com Node.js e Commander.
 
-* 📂 Cria estruturas reais de arquivos e pastas
-* 📄 Suporte a árvores no estilo `tree`
-* 🔍 Exibe a estrutura em JSON
-* ⚙️ Configuração de espaçamento/indentação
-* 🖥️ CLI simples e rápida
+- 📂 Cria estruturas reais de arquivos e pastas
+- 📄 Suporte a árvores no estilo `tree`
+- 🔍 Exibe a estrutura em JSON
+- ⚙️ Configuração de espaçamento/indentação
+- 🖥️ CLI simples e rápida
 
 ---
 
@@ -21,15 +21,11 @@ git clone https://github.com/levileve/tree-cli
 cd tree-cli
 ```
 
----
-
 ## Instale as dependências
 
 ```bash
 npm install
 ```
-
----
 
 ## Registre a CLI globalmente
 
@@ -53,55 +49,49 @@ tree-cli
 tree-cli [input] [options]
 ```
 
----
-
 ## 📌 Argumento `[input]`
 
-| Argumento | Descrição                  |
-| ---------- | -------------------------- |
+| Argumento | Descrição |
+|---|---|
 | `[input]` | Arquivo `.txt` de entrada |
-
----
 
 ## ⚙️ Opções `[options]`
 
-| Opção                | Descrição                          |
-| -------------------- | ---------------------------------- |
-| `-o, --output <dir>` | Diretório de saída                 |
-| `--spaces`           | Quantidade de espaços por nível    |
-| `--space`            | Alias de `--spaces`                |
-| `--indent`           | Alias de `--spaces`                |
-| `--json`             | Exibe o JSON da estrutura          |
-| `--only-json`        | Exibe apenas o JSON                |
-| `--json-only`        | Alias de `--only-json`             |
+| Opção | Descrição |
+|---|---|
+| `-o, --output <dir>` | Diretório de saída |
+| `--spaces` | Quantidade de espaços por nível |
+| `--space` | Alias de `--spaces` |
+| `--indent` | Alias de `--spaces` |
+| `--json` | Exibe o JSON da estrutura |
+| `--only-json` | Exibe apenas o JSON |
+| `--json-only` | Alias de `--only-json` |
 
 ---
 
-## ⚠️ Estrutura do arquivo de entrada
+# ⚠️ Estrutura do arquivo de entrada
 
-* Diretórios devem terminar com `/`
-* Arquivos devem possuir extensão, iniciar com letra maiúscula (ex: `Dockerfile`) ou iniciar com `.` (ex: `.env`, `.gitignore`)
-* Para criar a estrutura do projeto, são aceitos:
-  * indentação via tabulação
-  * símbolos `├──`, `│` e `└──`
-
----
+- Diretórios devem terminar com `/`
+- Arquivos devem possuir extensão, iniciar com letra maiúscula (ex: `Dockerfile`) ou iniciar com `.` (ex: `.env`, `.gitignore`)
+- Para criar a estrutura do projeto, são aceitos:
+  - indentação via tabulação
+  - símbolos `├──`, `│` e `└──`
 
 ## 📝 Exemplo de estrutura do arquivo de entrada
 
 ```text
- ├── client/
- │   ├── src/
- │   │   ├── app.js
- │   ├── build/
- │
- ├── server/
- │   ├── index.js
- │
- ├── Dockerfile
- ├── docker-compose.yml
- ├── .gitignore
- ├── .env
+├── client/
+│   ├── src/
+│   │   ├── app.js
+│   ├── build/
+│
+├── server/
+│   ├── index.js
+│
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+├── .env
 ```
 
 ---
@@ -113,8 +103,6 @@ tree-cli [input] [options]
 ```bash
 tree-cli tree.txt
 ```
-
----
 
 ## 📁 Definir diretório de saída
 
@@ -128,15 +116,11 @@ ou:
 tree-cli tree.txt -o ./meu-projeto
 ```
 
----
-
 ## 🔍 Exibir o JSON da estrutura (criando os arquivos)
 
 ```bash
 tree-cli tree.txt --json
 ```
-
----
 
 ## 📄 Exibir apenas o JSON (sem criar arquivos)
 
@@ -174,7 +158,7 @@ tree-cli tree.txt --json-only
 
 ---
 
-## ⚙️ Configurar indentação
+# ⚙️ Configurar indentação
 
 Por padrão:
 
@@ -212,8 +196,6 @@ tree-cli/
 ├── package.json
 ```
 
----
-
 ## 🧠 Como funciona
 
 A CLI:
@@ -222,8 +204,6 @@ A CLI:
 2. Interpreta os níveis da árvore
 3. Converte a estrutura para um JSON interno
 4. Cria arquivos e diretórios reais
-
----
 
 ## 🛠️ Desenvolvimento
 
